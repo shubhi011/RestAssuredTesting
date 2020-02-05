@@ -1,0 +1,120 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-12T16:35:50.507Z",
+        "line": 3,
+        "name": "Verify if Place is successfully added with Add Place API",
+        "description": "",
+        "id": "validate-add-place-api;verify-if-place-is-successfully-added-with-add-place-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 903434082,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Add Place payload",
+            "match": {
+              "location": "StepDefinitions.add_Place_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2324886067,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user calls \"addPlaceAPI\" Api with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"addPlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 34
+                }
+              ],
+              "location": "StepDefinitions.user_calls_Api_with_http_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1589241,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the Api call is success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefinitions.the_Api_call_is_success_with_status_code(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 261001703,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinitions.the_in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7066982,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 28
+                }
+              ],
+              "location": "StepDefinitions.the_in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Validate Add Place API",
+    "description": "",
+    "id": "validate-add-place-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/PlaceValidations.feature",
+    "tags": []
+  }
+]
